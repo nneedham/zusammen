@@ -1,7 +1,7 @@
 {
-  "name": "nathans-template",
+  "name": "zusammen",
   "version": "2.0.0",
-  "description": "Boilerplate Code to get started'!",
+  "description": "zusammen connects professionals to their cultural match",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
