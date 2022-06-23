@@ -18,7 +18,7 @@ class Routes extends Component {
 
     return (
       <div>
-        {isLoggedIn ? (
+        {/* {isLoggedIn ? (
           <Switch>
             <Route path="/home" component={Home} />
             <Redirect to="/home" />
@@ -29,7 +29,10 @@ class Routes extends Component {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
           </Switch>
-        )}
+        )} */}
+        <Switch>
+          <Route path='/' exact component={ Home } />
+        </Switch>
       </div>
     )
   }
