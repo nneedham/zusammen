@@ -24,7 +24,6 @@ function calculateScore(words) {
         searchField = searchField.slice(searchField.indexOf(target)+1)
       }
     }
-
   }
   return tracker
 }

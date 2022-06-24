@@ -9,6 +9,7 @@ export class Home extends React.Component {
   constructor() {
     super()
     this.state = {
+      userId: 0,
       text: '',
     }
 
@@ -16,6 +17,13 @@ export class Home extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({
+      ...this.state,
+      userId: this.props.auth.id
+    })
+    console.log(this.props)
+  }
   handleChange(evt) {
     this.setState({
       [evt.target.name]: evt.target.value
@@ -45,8 +53,12 @@ export class Home extends React.Component {
 /**
  * CONTAINER
  */
+
+const mapState = (state) => ({
+  auth: state.auth
+})
 const mapDispatch = (dispatch) => ({
   createResume: (resume) => dispatch(createResume(resume))
 })
 
-export default connect(null, mapDispatch)(Home)
+export default connect(mapState, mapDispatch)(Home)
