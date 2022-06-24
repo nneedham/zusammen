@@ -8,7 +8,8 @@ router.get('/:id', async (req, res, next) => {
     const userScores = await UserScores.findOne({
       where: {
         userId: id
-      }
+      },
+      attributes: ['innovatorWords', 'paragonWords', 'trendSetterWords', 'citizenWords', 'athleteWords', 'stewardWords', 'tinkererWords' ]
     });
     res.json(userScores);
   } catch (err) {
