@@ -4,10 +4,12 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
 import createResumeReducer from './createResume'
+import fetchUserScoresReducer from './fetchUserScores'
 
 const reducer = combineReducers({
   auth,
   createResume: createResumeReducer,
+  fetchUserScores: fetchUserScoresReducer
 })
 
 const middleware = composeWithDevTools(
