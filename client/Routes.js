@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
 import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
-import UserScores from './components/UserScores';
+import User from './components/User';
 import {me} from './store'
 
 /**
@@ -33,7 +33,7 @@ class Routes extends Component {
         )} */}
         <Switch>
           <Route path='/' exact component={ Home } />
-          <Route path='/userscores' exact component={ UserScores } />
+          <Route path='/user' exact component={ User } />
         </Switch>
       </div>
     )
