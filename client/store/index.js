@@ -4,9 +4,11 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
 import createResumeReducer from './createResume'
+import user from './singleUser'
 
 const reducer = combineReducers({
   auth,
+  user,
   createResume: createResumeReducer,
 })
 

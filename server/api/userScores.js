@@ -9,7 +9,7 @@ router.get('/:id', async (req, res, next) => {
       where: {
         userId: id
       },
-      attributes: ['innovatorWords', 'paragonWords', 'trendSetterWords', 'citizenWords', 'athleteWords', 'stewardWords', 'tinkererWords' ]
+      attributes: ['userId', 'innovatorWords', 'paragonWords', 'trendSetterWords', 'citizenWords', 'athleteWords', 'stewardWords', 'tinkererWords' ]
     });
     res.json(userScores);
   } catch (err) {

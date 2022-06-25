@@ -33,7 +33,8 @@ class Routes extends Component {
         )} */}
         <Switch>
           <Route path='/' exact component={ Home } />
-          <Route path='/user' exact component={ User } />
+          <Route path='/user/:id' component={ User } />
+          <Route path='/login' component={ Login } />
         </Switch>
       </div>
     )
